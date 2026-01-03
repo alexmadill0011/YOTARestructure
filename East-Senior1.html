@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOTA | East Senior I</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+    <script defer src="East-Senior1.js"></script>
+  </head>
+
+  <body>
+    <!-- Top Banner -->
+    <header class="top-banner">
+      <div class="top-banner__inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <h1>YOTA</h1>
+            <p>East • Senior I</p>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="chip" type="button" id="refreshBtn">Refresh</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Nav (injected) -->
+    <div id="nav-container"></div>
+
+    <!-- Page -->
+    <div class="page">
+      <main class="content">
+        <section class="card hero">
+          <div class="hero-inner">
+            <div>
+              <h2>East • Senior I</h2>
+              <p class="muted">
+                Filtered from the team sheet: <strong>Site = East</strong> and
+                <strong>Group = Senior I</strong>. Sorted A→Z, then Age ↓.
+              </p>
+            </div>
+
+            <div class="hero-meta">
+              <div class="pill purple" id="countPill">Loading…</div>
+              <div class="pill">Auto-sorted</div>
+              <div class="pill">Searchable</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card table-card">
+          <div class="table-head">
+            <div>
+              <h3 style="margin: 0">Roster + Swims</h3>
+              <p class="muted" style="margin: 6px 0 0">
+                Shows rows matching East / Senior I.
+              </p>
+            </div>
+
+            <div class="table-actions">
+              <input
+                id="searchInput"
+                class="input"
+                type="search"
+                placeholder="Search name, event, time…"
+              />
+              <button class="btn" type="button" id="clearBtn">Clear</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Event</th>
+                  <th>Time</th>
+                  <th>SC YNAT</th>
+                  <th>AG Champs</th>
+                </tr>
+              </thead>
+              <tbody id="rowsBody">
+                <tr>
+                  <td colspan="7" class="muted" style="padding: 18px">
+                    Loading…
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="footer muted">
+          <span>© <span id="year"></span> YOTA Swim Team</span>
+          <span class="dot">•</span>
+          <span>East Senior I</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

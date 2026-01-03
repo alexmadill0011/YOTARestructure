@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOTA | Roster Fit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+    <script defer src="RosterFit.js"></script>
+  </head>
+
+  <body>
+    <header class="top-banner">
+      <div class="top-banner__inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <h1>YOTA</h1>
+            <p>Roster Fit</p>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="chip" type="button" id="refreshBtn">Refresh</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="nav-container"></div>
+
+    <div class="page">
+      <main class="content">
+        <section class="card hero">
+          <div class="hero-inner">
+            <div>
+              <h2>Roster Fit</h2>
+              <p class="muted">
+                All athletes sorted by
+                <strong>Site → Group → Name</strong> (then Age ↓). Showing Name
+                and Age.
+              </p>
+            </div>
+
+            <div class="hero-meta">
+              <div class="pill purple" id="countPill">Loading…</div>
+              <div class="pill">Auto-grouped</div>
+              <div class="pill">Searchable</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card table-card">
+          <div class="table-head">
+            <div>
+              <h3 style="margin: 0">Athletes</h3>
+              <p class="muted" style="margin: 6px 0 0">
+                Sorted by Site and Group for quick roster sanity checks.
+              </p>
+            </div>
+
+            <div class="table-actions">
+              <input
+                id="searchInput"
+                class="input"
+                type="search"
+                placeholder="Search name, site, group…"
+              />
+              <button class="btn" type="button" id="clearBtn">Clear</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Site</th>
+                  <th>Group</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody id="rowsBody">
+                <tr>
+                  <td colspan="4" class="muted" style="padding: 18px">
+                    Loading…
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="footer muted">
+          <span>© <span id="year"></span> YOTA Swim Team</span>
+          <span class="dot">•</span>
+          <span>Roster Fit</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

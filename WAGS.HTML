@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOTA | West · Age Group Select</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+    <script defer src="WAGS.js"></script>
+  </head>
+
+  <body>
+    <header class="top-banner">
+      <div class="top-banner__inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <h1>YOTA</h1>
+            <p>West · Age Group Select</p>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="chip" id="refreshBtn">Refresh</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="nav-container"></div>
+
+    <div class="page">
+      <main class="content">
+        <section class="card hero">
+          <div class="hero-inner">
+            <div>
+              <h2>West · Age Group Select</h2>
+              <p class="muted">
+                Roster view with standards and progression tracking.
+              </p>
+            </div>
+            <div class="hero-meta">
+              <div class="pill purple" id="countPill">Loading…</div>
+              <div class="pill">Deduped</div>
+              <div class="pill">Searchable</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card table-card">
+          <div class="table-head">
+            <div>
+              <h3 style="margin: 0">Swimmers</h3>
+              <p class="muted">Source: Google Sheet</p>
+            </div>
+            <div class="table-actions">
+              <input
+                id="searchInput"
+                class="input"
+                type="search"
+                placeholder="Search…"
+              />
+              <button class="btn" id="clearBtn">Clear</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Short Course YNATS</th>
+                  <th>3%</th>
+                  <th>AAA</th>
+                  <th>AA</th>
+                  <th>200 IM / 400 IM</th>
+                  <th>Next Up</th>
+                </tr>
+              </thead>
+              <tbody id="rowsBody">
+                <tr>
+                  <td colspan="9" class="muted" style="padding: 18px">
+                    Loading…
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

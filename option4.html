@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOTA | Option 4 · Restructured Development</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+
+  <body>
+    <header class="top-banner">
+      <div class="top-banner__inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <h1>YOTA</h1>
+            <p>Option 4 · Restructured Development</p>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="chip" type="button">Locations</button>
+          <button class="chip" type="button">Groups</button>
+          <button class="chip" type="button">Standards</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="nav-container"></div>
+
+    <div class="page">
+      <main class="content">
+        <!-- HERO -->
+        <section class="card hero">
+          <div class="hero-inner">
+            <h1 style="margin: 0 0 6px">Option 4: Restructured Development</h1>
+            <p class="muted" style="margin: 0">
+              Expanded senior structure with Developmental + Developmental 2
+              while keeping West/East rollups.
+            </p>
+          </div>
+        </section>
+
+        <div class="section-title">
+          <h3>Overview</h3>
+          <span class="hint">Counts in circle · Revenue as $</span>
+        </div>
+
+        <!-- FULL WIDTH TOTAL -->
+        <section class="grid-full">
+          <article class="card kpi kpi-full">
+            <div class="kpi-title">Total Program</div>
+            <div class="kpi-circle">532</div>
+            <div class="kpi-value">$1,570,450</div>
+          </article>
+        </section>
+
+        <!-- ROW 1: 1/3 + 2/3 -->
+        <section class="grid-two">
+          <article class="card kpi">
+            <div class="kpi-title">West Side Total</div>
+            <div class="kpi-circle">214</div>
+            <div class="kpi-value">$607,525</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">East Side Total</div>
+            <div class="kpi-circle">318</div>
+            <div class="kpi-value">$962,925</div>
+          </article>
+        </section>
+
+        <!-- ROW 2: 1/3 + 2/3 with tier breakdown -->
+        <section class="grid-two">
+          <article class="card kpi">
+            <div class="kpi-title">West Side Senior</div>
+            <div class="kpi-circle">45</div>
+            <div class="kpi-value">$187,465</div>
+
+            <div class="kpi-breakdown">
+              <div>Elite: $28,716</div>
+              <div>National: $36,688</div>
+              <div>Developmental: $41,310</div>
+              <div>Developmental 2: $47,172</div>
+              <div>Senior 2: $33,579</div>
+            </div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">East Side Senior</div>
+            <div class="kpi-circle">95</div>
+            <div class="kpi-value">$400,370</div>
+
+            <div class="kpi-breakdown">
+              <div>Elite: $71,790</div>
+              <div>National: $91,720</div>
+              <div>Developmental: $82,620</div>
+              <div>Developmental 2: $98,275</div>
+              <div>Senior 2: $55,965</div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ROW 3: Site totals -->
+        <div class="section-title">
+          <h3>Sites</h3>
+          <span class="hint">Site totals</span>
+        </div>
+
+        <section class="grid-six">
+          <article class="card kpi">
+            <div class="kpi-title">Chapel Hill</div>
+            <div class="kpi-circle">89</div>
+            <div class="kpi-value">$223,205</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">Durham</div>
+            <div class="kpi-circle">80</div>
+            <div class="kpi-value">$196,855</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">Taylor</div>
+            <div class="kpi-circle">102</div>
+            <div class="kpi-value">$260,655</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">Alexander</div>
+            <div class="kpi-circle">19</div>
+            <div class="kpi-value">$43,980</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">Finley</div>
+            <div class="kpi-circle">59</div>
+            <div class="kpi-value">$149,345</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-title">Kerr</div>
+            <div class="kpi-circle">43</div>
+            <div class="kpi-value">$108,575</div>
+          </article>
+        </section>
+
+        <!-- spacer + centered Notes -->
+        <div class="section-spacer"></div>
+
+        <div class="notes-center">
+          <section class="card">
+            <h3 style="margin: 0 0 8px">Notes</h3>
+            <p class="muted" style="margin: 0 0 10px">
+              Broken into a quad development strcuture for better use of
+              staffing.<br />
+              <br />
+              Top line revenue has increased by 51,000 with no extra roster
+              adds.<br />
+              <br />
+              CORRECTING THE COACHING STAFF IS IMPERATIVE<br />
+              <br />
+            </p>
+          </section>
+        </div>
+
+        <footer class="footer muted">
+          <span>© <span id="year"></span> YOTA Swim Team</span>
+          <span class="dot">•</span>
+          <span>Option 4 · Restructured Development</span>
+        </footer>
+
+        <script>
+          const y = document.getElementById("year");
+          if (y) y.textContent = new Date().getFullYear();
+        </script>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+<!-- Short Course YNAT 2026.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOTA | Short Course YNAT 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="Short Course YNAT 2026.js"></script>
+  </head>
+
+  <body>
+    <header class="top-banner">
+      <div class="top-banner__inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <h1>YOTA</h1>
+            <p>Meet Prep</p>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button class="chip" type="button">Locations</button>
+          <button class="chip" type="button">Groups</button>
+          <button class="chip" type="button">Standards</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="nav-container"></div>
+
+    <div class="page">
+      <main class="content">
+        <!-- HERO -->
+        <section class="card hero">
+          <div class="hero-inner impact-hero">
+            <h1 class="impact-title">Short Course YNAT</h1>
+            <h2 class="impact-subtitle">2026 · Meet Prep</h2>
+
+            <div class="impact-spacer"></div>
+
+            <h3 class="impact-acronym">Focus Areas</h3>
+          </div>
+        </section>
+
+        <!-- QUICK LINKS / HIGHLIGHTS -->
+        <div class="section-title">
+          <h3>At a Glance</h3>
+          <span class="hint">Placeholder KPIs — we’ll wire these up next</span>
+        </div>
+
+        <section class="grid">
+          <article class="card kpi">
+            <div class="kpi-top">
+              <strong>Qualifiers</strong>
+              <span class="badge">SC</span>
+            </div>
+            <div class="kpi-value" id="qualifierCount">—</div>
+            <div class="kpi-sub">Unique swimmers with at least 1 cut</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-top">
+              <strong>Bubble Swims</strong>
+              <span class="badge">Near</span>
+            </div>
+            <div class="kpi-value" id="bubbleCount">—</div>
+            <div class="kpi-sub">Near-misses / next-up list</div>
+          </article>
+
+          <article class="card kpi">
+            <div class="kpi-top">
+              <strong>Relays to Watch</strong>
+              <span class="badge">Team</span>
+            </div>
+            <div class="kpi-value" id="relayCount">—</div>
+            <div class="kpi-sub">Potential relay combinations</div>
+          </article>
+        </section>
+
+        <!-- Short Course YNAT 2026.html (replace the entire Build-Out section with this) -->
+
+        <div class="section-title">
+          <h3
+            style="
+              color: #ffffff;
+              font-size: 28px;
+              font-weight: 700;
+              letter-spacing: 0.4px;
+            "
+          >
+            Qualifiers - Click to Open
+          </h3>
+          <span class="hint"
+            >Swimmers with at least 1 swim ≤ YNAT (click to minimize)</span
+          >
+        </div>
+
+        <section class="card">
+          <button
+            class="qual-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="qualifierBody"
+            style="
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+              background: transparent;
+              border: 0;
+              padding: 14px;
+              cursor: pointer;
+              text-align: left;
+            "
+            onclick="toggleQualifiers()"
+          >
+            <div style="display: flex; align-items: center; gap: 10px">
+              <span class="muted" id="qualifierSummary">—</span>
+              <span class="muted" id="qualifierChevron">▾</span>
+            </div>
+          </button>
+
+          <div id="qualifierBody" style="padding: 0 14px 14px">
+            <div id="qualifierList" class="muted">Loading…</div>
+          </div>
+        </section>
+
+        <div class="section-title">
+          <h3
+            style="
+              color: #fff;
+              font-size: 28px;
+              font-weight: 700;
+              letter-spacing: 0.4px;
+            "
+          >
+            Bubble Swims
+          </h3>
+          <span class="hint"
+            >Swimmers at 100.01%–103% of YNAT cut (click to minimize)</span
+          >
+        </div>
+
+        <section class="card">
+          <button
+            class="bubble-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="bubbleBody"
+            style="
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+              background: transparent;
+              border: 0;
+              padding: 14px;
+              cursor: pointer;
+              text-align: left;
+            "
+            onclick="toggleBubble()"
+          >
+            <div style="display: flex; align-items: center; gap: 10px">
+              <strong>Bubble Swims</strong>
+              <span class="badge">Near</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px">
+              <span class="muted" id="bubbleSummary">—</span>
+              <span class="muted" id="bubbleChevron">▾</span>
+            </div>
+          </button>
+
+          <div id="bubbleBody" style="padding: 0 14px 14px">
+            <div id="bubbleList" class="muted">Loading…</div>
+          </div>
+        </section>
+
+        <!-- MEN / WOMEN TABLE SECTION -->
+        <div class="section-title">
+          <h3>Meet Prep Tables</h3>
+          <span class="hint">Men / Women breakdowns</span>
+        </div>
+
+        <section
+          class="grid"
+          style="grid-template-columns: repeat(2, minmax(0, 1fr))"
+        >
+          <!-- MEN -->
+          <article class="card">
+            <div class="kpi-top">
+              <strong>Men</strong>
+              <span class="badge">M</span>
+            </div>
+
+            <table
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+                font-size: 12px;
+                text-align: center;
+              "
+            >
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Cut</th>
+                  <th>B Final</th>
+                  <th>A Final</th>
+                  <th>Bubble</th>
+                </tr>
+              </thead>
+              <tbody id="menStandardsBody">
+                <tr>
+                  <td colspan="5" class="muted">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <!-- WOMEN -->
+          <article class="card">
+            <div class="kpi-top">
+              <strong>Women</strong>
+              <span class="badge">F</span>
+            </div>
+
+            <table
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+                font-size: 12px;
+                text-align: center;
+              "
+            >
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Cut</th>
+                  <th>B Final</th>
+                  <th>A Final</th>
+                  <th>Bubble</th>
+                </tr>
+              </thead>
+              <tbody id="womenStandardsBody">
+                <tr>
+                  <td colspan="5" class="muted">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+
+        <footer class="footer muted">
+          <span>© <span id="year"></span> YOTA Swim Team</span>
+          <span class="dot">•</span>
+          <span>Short Course YNAT 2026</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
